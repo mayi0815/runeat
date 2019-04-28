@@ -128,14 +128,14 @@ const ProfileStaticCell = ({
 
 const styles = StyleSheet.create({
     header: {
-        height: __IOS__ ? 44 : 50,
-        marginTop: __IOS__ ? 20 : 0,
+        height: Platform.select({ ios: 44, android: 50 }),
+        marginTop: Platform.select({ ios: 20, android: 0 }),
         alignItems: 'center',
         justifyContent: 'center',
     },
     settingContainer: {
-        height: __IOS__ ? 44 : 50,
-        width: __IOS__ ? 44 : 50,
+        height: Platform.select({ ios: 44, android: 50 }),
+        width: Platform.select({ ios: 44, android: 50 }),
         position: 'absolute',
         top: 0,
         right: 0,

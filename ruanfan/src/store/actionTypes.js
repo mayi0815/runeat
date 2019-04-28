@@ -1,0 +1,1 @@
+export const UPDATE_BAR_STYLE = 'update_bar_style'

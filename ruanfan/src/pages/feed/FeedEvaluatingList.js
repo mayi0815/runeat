@@ -3,6 +3,7 @@
  * 逛吃-评测
  */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import {
     StyleSheet,
     View,

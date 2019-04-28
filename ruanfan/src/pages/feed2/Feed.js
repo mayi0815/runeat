@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     photo: {
-        width: __IOS__ ? 44 : 50,
-        height: __IOS__ ? 44 : 50,
+        width: Platform.select({ ios: 44, android: 50 }),
+        height: Platform.select({ ios: 44, android: 50 }),
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
