@@ -1,6 +1,6 @@
 import * as ActionType from '../actionTypes'
 
-export const updateBarStyle = (data) => ({
+export const updateBarStyle = (style) => ({
   type: ActionType.UPDATE_BAR_STYLE,
-  payload: data
+  payload: style
 })

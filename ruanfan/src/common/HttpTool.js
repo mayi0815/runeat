@@ -5,14 +5,18 @@ const delay = timeout => {
     })
 }
 
-const get = ({url, params = {}, timeout}) => {
-    const paramArr = []
+const formatUrl = ({url, params = {}}) => {
+  const paramArr = []
     if (Object.keys(params).length !== 0) {
         for (const key in params) {
             paramArr.push(`${key}=${params[key]}`)
         }
     }
-    const urlStr = `${url}?${paramArr.join('&')}`
+    return `${url}?${paramArr.join('&')}`
+}
+
+const get = ({url, params = {}, timeout}) => {
+    const urlStr = formatUrl({url, params})
 
     if (timeout === undefined) {
         return fetch(urlStr)
@@ -21,4 +25,4 @@ const get = ({url, params = {}, timeout}) => {
     }
 }
 
-export { get }
+export { formatUrl, get }

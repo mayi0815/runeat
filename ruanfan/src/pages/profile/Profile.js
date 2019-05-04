@@ -3,12 +3,14 @@
  * 我的
  */
 import React, {PureComponent} from 'react'
+import { gScreen } from '../../global';
 import {
     StyleSheet,
     View,
     TouchableOpacity,
     Text,
     Image,
+    Platform
 } from 'react-native'
 import {Navigator} from 'react-native-deprecated-custom-components'
 import {observer, inject} from 'mobx-react/native'

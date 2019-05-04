@@ -95,8 +95,8 @@ export default class FeedEvaluatingList extends PureComponent {
 class EvaluatingItem extends PureComponent {
 
     static propTypes = {
-        feed: React.PropTypes.object,
-        onPress: React.PropTypes.func
+        feed: PropTypes.object,
+        onPress: PropTypes.func
     }
 
     _onPress = () => {

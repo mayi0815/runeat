@@ -2,6 +2,7 @@
  * Created by ljunb on 2017/3/15.
  */
 import React, { Component } from "react";
+import { gScreen } from '../global';
 import PropTypes from 'prop-types'; 
 import { StyleSheet, View, Text, TouchableOpacity, Image } from "react-native";
 
@@ -52,17 +53,17 @@ const RightIconItem = ({ onPress, icon }) => {
 export default class Header extends Component {
   static propTypes = {
     style: View.propTypes.style,
-    title: React.PropTypes.string,
-    showGoBack: React.PropTypes.bool,
-    onBack: React.PropTypes.func,
-    titleStyle: React.PropTypes.object,
-    rightTitle: React.PropTypes.string,
-    onRight: React.PropTypes.func,
-    rightIcon: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+    title: PropTypes.string,
+    showGoBack: PropTypes.bool,
+    onBack: PropTypes.func,
+    titleStyle: PropTypes.object,
+    rightTitle: PropTypes.string,
+    onRight: PropTypes.func,
+    rightIcon: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ]),
-    renderRightItem: React.PropTypes.func
+    renderRightItem: PropTypes.func
   };
 
   static defaultProps = {

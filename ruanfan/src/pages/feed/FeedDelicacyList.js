@@ -100,8 +100,8 @@ export default class FeedDelicacyList extends PureComponent {
 class DelicacyItem extends PureComponent {
 
     static propTypes = {
-        feed: React.PropTypes.object,
-        onPress: React.PropTypes.func
+        feed: PropTypes.object,
+        onPress: PropTypes.func
     }
 
     _onPress = () => {

@@ -2,6 +2,7 @@
  * Created by ljunb on 16/8/21.
  */
 import React, { Component } from 'react'
+import { gScreen } from '../global';
 import { Image } from 'react-native'
 
 export default class Splash extends Component {

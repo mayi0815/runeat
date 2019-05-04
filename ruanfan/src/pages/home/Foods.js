@@ -15,6 +15,7 @@ import {
   ScrollView,
   ActivityIndicator
 } from "react-native";
+import { gScreen } from '../../global';
 import { observer } from "mobx-react/native";
 import { observable, runInAction, reaction, action, computed } from "mobx";
 import Header from "../../components/Header";
@@ -251,9 +252,9 @@ export default class Foods extends Component {
 
 class FoodSubCategoryHandleView extends Component {
   static propTypes = {
-    subCategories: React.PropTypes.object,
-    categoryId: React.PropTypes.number,
-    onSelectSubCategory: React.PropTypes.func
+    subCategories: PropTypes.object,
+    categoryId: PropTypes.number,
+    onSelectSubCategory: PropTypes.func
   };
 
   heightValue = new Animated.Value(0);
@@ -346,9 +347,9 @@ class FoodSubCategoryHandleView extends Component {
 
 class FoodSiftHandleView extends Component {
   static propTypes = {
-    sortTypes: React.PropTypes.array,
-    onSelectSortType: React.PropTypes.func,
-    onChangeOrderAsc: React.PropTypes.func
+    sortTypes: PropTypes.array,
+    onSelectSortType: PropTypes.func,
+    onChangeOrderAsc: PropTypes.func
   };
 
   orderByModalYValue = new Animated.Value(0);
@@ -514,9 +515,9 @@ const LoadingProgressView = ({ style }) => {
 
 class FoodItem extends Component {
   static propsTypes = {
-    food: React.PropTypes.object,
-    sortCode: React.PropTypes.string,
-    onPress: React.PropTypes.func
+    food: PropTypes.object,
+    sortCode: PropTypes.string,
+    onPress: PropTypes.func
   };
 
   _onPress = () => {

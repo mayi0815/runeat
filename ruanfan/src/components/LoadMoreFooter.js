@@ -12,7 +12,7 @@ import {
 
 export default class LoadMoreFooter extends Component {
     static propTypes = {
-        isNoMore: React.PropTypes.bool,
+        isNoMore: PropTypes.bool,
     }
 
     static defaultProps = {

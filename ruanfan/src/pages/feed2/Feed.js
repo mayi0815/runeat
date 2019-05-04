@@ -7,6 +7,7 @@ import {
     Image,
     TouchableOpacity,
     StyleSheet,
+    Platform
 } from 'react-native'
 import {Navigator} from 'react-native-deprecated-custom-components'
 import {observer, inject} from 'mobx-react/native'

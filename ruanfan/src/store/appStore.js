@@ -1,11 +1,10 @@
 import { createStore, applyMiddleware, compose } from "redux";
-// import thunk from 'redux-thunk';
-import rootReducer from "./reducer";
+import rootReducer from "./reducers";
 import { createEpicMiddleware } from "redux-observable";
-import { rootEpic } from './epics';
+import rootEpic from './epics';
 
-const maybeItem = localStorage.getItem("reduxState");
-const persistedState = maybeItem ? JSON.parse(maybeItem) : {};
+// const maybeItem = localStorage.getItem("reduxState");
+// const persistedState = maybeItem ? JSON.parse(maybeItem) : {};
 
 const composeEnhancers =
   process.env.NODE_ENV !== "production" &&
@@ -16,18 +15,20 @@ const composeEnhancers =
       })
     : compose;
 
-const epicMiddleware = createEpicMiddleware(rootEpic);
+const epicMiddleware = createEpicMiddleware();
 
 const enhancer = composeEnhancers(
   applyMiddleware(epicMiddleware)
   // other store enhancers if any
 );
 
-const store = createStore(rootReducer, persistedState, enhancer);
+const store = createStore(rootReducer, enhancer);
 
-store.subscribe(() =>
-  localStorage.setItem("reduxState", JSON.stringify(store.getState()))
-);
+epicMiddleware.run(rootEpic);
+
+// store.subscribe(() =>
+//   localStorage.setItem("reduxState", JSON.stringify(store.getState()))
+// );
 
 export default store;
 

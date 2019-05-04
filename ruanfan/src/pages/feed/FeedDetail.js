@@ -2,6 +2,7 @@
  * Created by ljunb on 16/5/30.
  */
 import React, {Component} from 'react';
+import { gScreen } from '../../global';
 import {
     View,
     StyleSheet,

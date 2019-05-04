@@ -9,8 +9,10 @@ import {
   Text,
   Image,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  Platform
 } from "react-native";
+import { gScreen } from '../../global';
 import { Navigator } from "react-native-deprecated-custom-components";
 import { observer, inject } from "mobx-react/native";
 import FoodEncyclopediaStore from "../../store/foodEncyclopediaStore";

@@ -2,6 +2,7 @@
  * Created by ljunb on 2016/12/1.
  */
 import React from "react";
+import { gScreen } from '../global';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 const FeedSingleImageItem = ({ title, source, viewCount, images, onPress }) => {

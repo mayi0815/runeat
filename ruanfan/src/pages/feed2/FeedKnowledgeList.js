@@ -94,8 +94,8 @@ export default class FeedKnowledgeList extends PureComponent {
 class KnowledgeItem extends PureComponent {
 
     static propTypes = {
-        feed: React.PropTypes.object,
-        onPress: React.PropTypes.func
+        feed: PropTypes.object,
+        onPress: PropTypes.func
     }
 
     _onPress = () => {

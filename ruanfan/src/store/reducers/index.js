@@ -17,28 +17,13 @@
 
 import { combineReducers } from 'redux';
 import { appReducer } from './app';
-
-const initialUserInvoicesState = {
-  invoices: []
-}
-
-export function userInvoicesReducer(state: UserInvoices = initialUserInvoicesState, action: Action) {
-  switch (action.type) {
-    case actions.GET_USER_INVOICES:
-      return {
-        ...state,
-        ...action.payload,
-      };
-    default:
-      return state
-  }
-}
+import { accountReducer } from './account';
+import { feedReducer } from './feed';
 
 const rootReducer = combineReducers({
-  appInfo: appReducer,
-  // userInfo: userInfoReducer,
-  // invoiceInfo: invoiceInfoReducer,
-  // userInvoices: userInvoicesReducer,
+  app: appReducer,
+  account: accountReducer,
+  feed: feedReducer,
 })
 
 export default rootReducer;

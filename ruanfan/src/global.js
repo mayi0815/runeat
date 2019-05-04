@@ -1,6 +1,6 @@
 import { Dimensions, Platform, PixelRatio } from "react-native";
 
-global.gScreen = {
+export const gScreen = {
   width: Dimensions.get("window").width,
   height: Dimensions.get("window").height,
   navBarHeight: Platform.select({ ios: 64, android: 50 }),
@@ -8,7 +8,7 @@ global.gScreen = {
   onePix: 1 / PixelRatio.get()
 };
 
-global.gColors = {
+export const gColors = {
   theme: "rgb(217, 51, 58)",
   background: "#f5f5f5",
   border: "#d5d5d5",
@@ -17,7 +17,7 @@ global.gColors = {
   healthRed: "rgb(251, 25, 8)"
 };
 
-global.gSortTypeUnitMapper = {
+export const gSortTypeUnitMapper = {
   calory: "千卡",
   protein: "克",
   fat: "克",

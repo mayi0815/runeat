@@ -3,6 +3,7 @@
  */
 import React, { PureComponent } from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
+import { gScreen } from '../global';
 import Header from "../components/Header";
 import { observer, inject } from "mobx-react/native";
 
